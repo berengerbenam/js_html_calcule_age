@@ -1,0 +1,285 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>note</title>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+</head>
+<body>
+<div class="container col-6">
+<div class='pInr'>
+<div class='pEnt' id='postID-8838313933156773213'>
+<div class='pS post-body postBody' id='postBody'>
+</script><script>/*<![CDATA[*/
+  function myGDL1() {
+      document.getElementById('toastNotif').innerHTML = '<span>Les détails de votre âge apparaissent ici !</span>';navigator.vibrate([50]) 
+        }
+  /*]]>*/</script>
+<script>
+
+var mS = ['Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre'];
+
+
+var dat = new Date();
+
+
+var curday = dat.getDate();
+
+
+var curmon = dat.getMonth() + 1;
+
+
+var curyear = dat.getFullYear();
+
+
+var startyear =  dat.getFullYear()-100;
+
+
+var endyear = dat.getFullYear();
+
+
+function checkleapyear(datea) {
+
+
+    if (datea.getYear() % 4 == 0) {
+
+
+        if (datea.getYear() % 10 != 0) {
+
+
+            return true;
+
+
+        } else {
+
+
+            if (datea.getYear() % 400 == 0) return true;
+
+
+            else return false;
+
+
+        }
+
+
+    }
+
+
+    return false;
+
+
+}
+
+
+function DaysInMonth(Y, M) {
+
+
+    with(new Date(Y, M, 1, 12)) {
+
+
+        setDate(0);
+
+
+        return getDate();
+
+
+    }
+
+
+}
+
+
+function datediff(date1, date2) {
+
+
+    var y1 = date1.getFullYear(),
+
+
+        m1 = date1.getMonth(),
+
+
+        d1 = date1.getDate(),
+
+
+        y2 = date2.getFullYear(),
+
+
+        m2 = date2.getMonth(),
+
+
+        d2 = date2.getDate();
+
+
+    if (d1 < d2) {
+
+
+        m1--;
+
+
+        d1 += DaysInMonth(y2, m2);
+
+
+    }
+
+
+    if (m1 < m2) {
+
+
+        y1--;
+
+
+        m1 += 12;
+
+
+    }
+
+
+    return [y1 - y2, m1 - m2, d1 - d2];
+
+
+}
+
+function calage() {
+
+
+    var calday = document.birthday.day.options[document.birthday.day.selectedIndex].value;
+
+
+    var calmon = document.birthday.month.options[document.birthday.month.selectedIndex].value;
+
+
+    var calyear = document.birthday.year.options[document.birthday.year.selectedIndex].value;
+
+
+    if (curday == "" || curmon == "" || curyear == "" || calday == "" || calmon == "" || calyear == "") {
+
+
+        alert("S'il vous plaît remplissez toutes les valeurs");
+
+
+    } else {
+
+
+        var curd = new Date(curyear, curmon - 1, curday);
+
+
+        var cald = new Date(calyear, calmon - 1, calday);
+
+
+      var diff = Date.UTC(curyear, curmon, curday, 0, 0, 0) - Date.UTC(calyear, calmon, calday, 0, 0, 0);
+
+
+        var dife = datediff(curd, cald);
+
+
+        document.birthday.age.value = dife[0] + " ans, " + dife[1] + " mois, et " + dife[2] + " jours";
+
+
+        var monleft = (dife[0] * 12) + dife[1];
+
+
+        var secleft = diff / 1000 / 60;
+
+
+        var hrsleft = (secleft / 60);
+
+
+        var daysleft = (hrsleft / 24);
+
+
+        document.birthday.months.value = monleft + " mois depuis votre anniversaire";
+
+
+        document.birthday.daa.value = daysleft + " jours depuis votre anniversaire";
+
+
+        document.birthday.hours.value = hrsleft + " heures depuis votre anniversaire";
+
+
+        document.birthday.min.value = secleft + " minutes depuis votre anniversaire";
+
+
+        document.birthday.sec.value = (secleft*60) + " secondes depuis votre anniversaire";
+
+
+        var as = parseInt(calyear) + dife[0] + 1;
+
+
+        var diff = Date.UTC(as, calmon, calday, 0, 0, 0) - Date.UTC(curyear, curmon, curday, 0, 0, 0);
+
+
+        var datee = diff / 1000 / 60 / 60 / 24;
+
+
+        document.birthday.nbday.value = datee + " jours avant votre prochain anniversaire.";
+
+
+    }
+
+
+}
+
+</script><script>/*<![CDATA[*/
+  function myGDL1() {
+      document.getElementById('toastNotif').innerHTML = '<span>Success! Your age details are here</span>';navigator.vibrate([50]) 
+        }
+  /*]]>*/</script>
+
+</script><script>/*<![CDATA[*/
+
+
+  function myGDL1() {
+
+
+      document.getElementById('toastNotif').innerHTML = '<span>Les détails de votre âge apparaissent ici !</span>';navigator.vibrate([50]) 
+
+
+        }
+
+
+  /*]]>*/</script>
+
+  <center><h3 class="text-primary">Sélectionner votre date de naissance</h3></center><br />
+            <form name="birthday">
+  <div class='cArea'>
+               <span class="date">Jours</span>&nbsp;<b>:</b>&nbsp;
+               <select name="day" size="1" class="form-control">
+                  <script type="text/javascript">for(var j=1;j<32;j++)document.write("<option value="+j+">"+j+"</option>");</script>
+               </select>
+               <span class="date">Mois</span>&nbsp;<b >:</b>&nbsp;
+               <select name="month" size="1" class="form-control">
+                  <script type="text/javascript">for(var i=1;i<13;i++)document.write("<option value="+i+">"+mS[i-1]+"</option>");</script>
+               </select>
+          <span class="date ">Années</span>&nbsp;<b >:</b>&nbsp;
+               <select name="year" size="1" class="form-control mb-2">
+                 <script type="text/javascript">for(var k=startyear;k<=endyear;k++)document.write("<option value="+k+">"+k+"</option>");</script>
+               </select>
+
+            <p style="text-align:center;">
+              <input name="start" onclick="calage();myGDL1()" value="Calculer" type="button" style="width:100px; margin: 0 auto;" class="btn btn-outline-success">
+       </p>        
+
+               <input name="age" value="Les résultats apparaîtront ici"  style="width:100%;" type="text" class="form-control">
+               <p class="date1">Vous êtes en vie depuis déjà - </p>
+                    <td class="date-red">En mois</td>
+                    <input name="months" style="width:100%;" type="text" class="form-control">
+<br />
+                      <td class="date-red">En jours</td>
+                      <td><input class='cInpt cName form-control' name="daa" style="width:100%;" type="text"></td>
+                 <br />
+                        <td class="date-red">En heures</td>
+                        <td><input name="hours" style="width:100%;" type="text" class="form-control"></td><br />
+  <td class="date-red">En minutes</td>
+                        <td><input name="min" style="width:100%;" type="text" class="form-control"></td>
+<br />
+
+                        <td class="date-red">En secondes</td>
+
+
+                        <td><input name="sec" style="width:100%;" type="text" class="form-control"></td>
+<hr>
+                        <td colspan="2" class="date-red">Boom! Votre prochain anniversaire sera dans : </td>
+                        <td colspan="2"><input name="nbday" style="width:100%;" type="text" class="form-control"></td>
+              </div>
+            </form>
